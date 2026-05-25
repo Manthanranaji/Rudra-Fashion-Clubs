@@ -17,7 +17,7 @@ export default function useReveal() {
         }
       },
       {
-        threshold: 0.15,        // lower = better mobile support
+        threshold: 0.30,        // lower = better mobile support
         rootMargin: "100px",    // triggers earlier on mobile
       }
     );

@@ -7,10 +7,24 @@ import useReveal from "./reveal";
 export default function Home(){
 
   const ref = useReveal();
+  const ref1 = useReveal();
+  const ref2 = useReveal();
+  const ref3 = useReveal();
+  const ref4 = useReveal();
+  const ref5 = useReveal();
+  const ref6 = useReveal();
+  const ref7 = useReveal();
+  const ref8 = useReveal();
+  const ref9 = useReveal();
+  const ref10 = useReveal();
+  const ref11 = useReveal();
+  const ref12 = useReveal();
+  const ref13 = useReveal();
+  const ref14 = useReveal();
 
 
   return(
-    <div className="min-h-screen w-full bg-[#F7F3ED] relative scroll-smooth overflow-x-hidden">
+    <div className="min-h-screen w-full bg-[#F7F3ED] relative  pointer-events-none select-none scroll-smooth overflow-x-hidden">
       <Navbar/>
     
       <div className="absolute inset-0 pointer-events-none opacity-[0.5] z-30
@@ -104,8 +118,9 @@ export default function Home(){
 
         <span className="text-[#2A2018]/10 text-[120px] md:absolute md:left-[60px] leading-none font-black font-playfair">“</span>
         
-        <h2 className="font-cormorant text-4xl text-[#2A2018] md:text-7xl md:absolute md:left-[140px]">Born from fire. Worn with <span className="text-[#C17F3E]">purpose</span></h2>
+        <h2 ref={ref1} className="reveal font-cormorant text-4xl text-[#2A2018] md:text-7xl md:absolute md:left-[140px]">Born from fire. Worn with <span className="text-[#C17F3E]">purpose</span></h2>
         </section>
+        
 
 
         <section id="about" className="bg-[#EFE7DC]/80 backdrop-blur-md min-h-screen px-6 py-28 mb-12 overflow-hidden">
@@ -139,19 +154,19 @@ export default function Home(){
 
         <div className="relative z-10 max-w-3xl pt-2 ">
   
-  <span className="text-[#2A2018]/70 uppercase text-xs tracking-widest font-cormorant">
+  <span ref={ref2} className="reveal text-[#2A2018]/70 uppercase text-xs tracking-widest font-cormorant">
     &mdash; Our story
   </span>
 
-  <h3 className="text-[5rem] -mt-[2px] font-lovers tracking-wider text-[#0d0d0d]/80">
+  <h3 ref={ref3} className="reveal text-[5rem] -mt-[2px] font-lovers tracking-wider text-[#0d0d0d]/80">
     About
   </h3>
   
-    <h4 className=" mb-12 text-xl font-cormorant italic font-semibold tracking-widest text-[#2a2018]/80">
+    <h4 ref={ref4} className="reveal mb-12 text-xl font-cormorant italic font-semibold tracking-widest text-[#2a2018]/80">
     “ Wear the <span className="uppercase text-[#c17f3e] tracking-tight">Extraordinary</span>. ”
     </h4>
 
-  <p className="font-cormorant text-md tracking-wider leading-8 text-[#2A2018]/90">
+  <p ref={ref5} className="reveal font-cormorant text-md tracking-wider leading-8 text-[#2A2018]/90">
           Rudra Fashion Clubs doesn’t follow trends.
 It was created for people who walk into a room and leave a memory behind.
 
@@ -168,7 +183,7 @@ For those who wear ambition like armor.
 For those building a legacy long before the world notices it.
           </p>
 
-          <h5 className="font-lovers text-[2rem] text-[#2a2018]/50 mt-12 tracking-widest">Where Elegance meets fabrics</h5>
+          <h5 ref={ref6} className="reveal font-lovers text-[2rem] text-[#2a2018]/50 mt-12 tracking-widest">Where Elegance meets fabrics</h5>
         </div>
 
 
@@ -211,49 +226,51 @@ For those building a legacy long before the world notices it.
       Contact
     </h2>
 
-    <h3 className="font-cormorant text-2xl italic tracking-widest text-[#4A3F35] absolute left-[10px] top-[160px]">
+    <h3 ref={ref7} className="reveal font-cormorant text-2xl italic tracking-widest text-[#4A3F35] absolute left-[10px] top-[160px]">
       “ <span className="text-[#c17f3e] uppercase">Find us</span> below at: ”
     </h3>
     
       
     {/* WHATSAPP */}
-    <h4 className="font-lovers text-[#7A6A58] text-[3rem] absolute top-[260px] tracking-widest left-[10px]">
+    <h4 ref={ref8} className="reveal font-lovers text-[#7A6A58] text-[3rem] absolute top-[260px] tracking-widest left-[10px]">
       WhatsApp:
     </h4>
 
-    <p className="font-cormorant text-[#7A6A58]/70 text-lg absolute top-[320px] tracking-widest left-[10px]">
+    <p ref={ref9} className="reveal font-cormorant text-[#7A6A58]/70 text-lg absolute top-[320px] tracking-widest left-[10px]">
       For orders and assistance, connect with us on WhatsApp.
     </p>
 
     <a
+      ref={ref10}
       href="https://wa.me/919592285000"
       target="_blank"
       rel="noopener noreferrer"
-      className="font-cormorant text-blue-700 absolute top-[400px] left-[10px] text-xl italic tracking-widest"
+      className="reveal font-cormorant text-blue-700 absolute top-[400px] left-[10px] text-xl italic tracking-widest"
     >
       → Talk to us here
     </a>
 
     {/* INSTAGRAM */}
-    <h5 className="text-[3rem] text-[#7A6A58] tracking-widest font-lovers absolute top-[450px] left-[10px]">
+    <h5 ref={ref11} className="reveal text-[3rem] text-[#7A6A58] tracking-widest font-lovers absolute top-[450px] left-[10px]">
       Instagram:
     </h5>
 
-    <p className="font-cormorant text-[#7A6A58]/70 text-lg absolute top-[510px] tracking-widest left-[10px]">
+    <p ref={ref12} className="reveal font-cormorant text-[#7A6A58]/70 text-lg absolute top-[510px] tracking-widest left-[10px]">
       Discover our collections on Instagram.
     </p>
 
     <a
+      ref={ref13}
       href="https://www.instagram.com/rudra_clubfashionlabs/"
       target="_blank"
       rel="noopener noreferrer"
-      className="font-cormorant text-blue-700 absolute top-[560px] left-[10px] text-xl italic tracking-widest"
+      className="reveal font-cormorant text-blue-700 absolute top-[560px] left-[10px] text-xl italic tracking-widest"
     >
       → Explore Our collection
     </a>
 
     {/* FIXED H6 */}
-    <h6 className="font-cormorant text-xl tracking-widest text-[#2a2018]/80 absolute top-[640px] left-[10px] z-20">
+    <h6 ref={ref14} className="reveal font-cormorant text-xl tracking-widest text-[#2a2018]/80 absolute top-[640px] left-[10px] z-20">
       We respect your messages and enquiries.
     </h6>
 
