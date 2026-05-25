@@ -1,23 +1,31 @@
-'use client'
+"use client";
 
-import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useEffect, useRef } from "react";
 
-export default function Reveal({ children }) {
-  const ref = useRef(null)
-  const isInView = useInView(ref, {
-    once: true,
-    amount: 0,
-  })
+export default function useReveal() {
+  const ref = useRef(null);
 
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.8 }}
-    >
-      {children}
-    </motion.div>
-  )
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.15,        // lower = better mobile support
+        rootMargin: "100px",    // triggers earlier on mobile
+      }
+    );
+
+    observer.observe(el);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return ref;
 }

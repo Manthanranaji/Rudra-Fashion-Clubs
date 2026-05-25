@@ -1,10 +1,13 @@
 'use client'
 
 import Navbar from "./navbar";
-import Reveal from "./reveal";
+import useReveal from "./reveal";
 
 
 export default function Home(){
+
+  const ref = useReveal();
+
 
   return(
     <div className="min-h-screen w-full bg-[#F7F3ED] relative scroll-smooth overflow-x-hidden">
@@ -171,6 +174,8 @@ For those building a legacy long before the world notices it.
 
         </section>
 
+        
+        
         <section
   id="contact"
   className="relative bg-[#F3EEE6]/80 backdrop-blur-md min-h-screen px-6 py-28 mb-24 overflow-hidden"
@@ -197,18 +202,20 @@ For those building a legacy long before the world notices it.
       C
     </span>
 
+
     <span className="font-cormorant text-[#2a2018] tracking-widest absolute left-[10px]">
       &mdash; Begin a conversation
     </span>
 
-    <h2 className="text-[#0d0d0d]/80 font-lovers tracking-widest text-[5rem] absolute left-[10px] top-[20px]">
+    <h2 ref={ref} className="reveal text-[#0d0d0d]/80 font-lovers tracking-widest text-[5rem] absolute left-[10px] top-[20px]">
       Contact
     </h2>
 
     <h3 className="font-cormorant text-2xl italic tracking-widest text-[#4A3F35] absolute left-[10px] top-[160px]">
       “ <span className="text-[#c17f3e] uppercase">Find us</span> below at: ”
     </h3>
-
+    
+      
     {/* WHATSAPP */}
     <h4 className="font-lovers text-[#7A6A58] text-[3rem] absolute top-[260px] tracking-widest left-[10px]">
       WhatsApp:
@@ -219,7 +226,7 @@ For those building a legacy long before the world notices it.
     </p>
 
     <a
-      href="https://wa.me/917710326008"
+      href="https://wa.me/919592285000"
       target="_blank"
       rel="noopener noreferrer"
       className="font-cormorant text-blue-700 absolute top-[400px] left-[10px] text-xl italic tracking-widest"
