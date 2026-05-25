@@ -197,7 +197,7 @@ For those building a legacy long before the world notices it.
 >
 
   {/* GRID */}
-  <div className="absolute inset-0 pointer-events-none opacity-[0.25] z-30
+  <div className="absolute inset-0 pointer-events-none opacity-[0.5] z-30
     bg-[linear-gradient(to_right,rgba(0,0,0,0.08)_1px,transparent_1px),
     linear-gradient(to_bottom,rgba(0,0,0,0.08)_1px,transparent_1px)]
     bg-[size:70px_70px] md:bg-[size:120px_120px] md:opacity-[0.7]"
@@ -209,74 +209,96 @@ For those building a legacy long before the world notices it.
     <div className="absolute top-[200px] left-[350px] w-[380px] h-[380px] rounded-full blur-[180px] bg-[#A68A72]/15" />
   </div>
 
-  {/* CONTENT WRAPPER (KEY FIX) */}
-  <div className="relative z-10 w-full w-full px-4 mx-auto h-[700px] md:h-[900px]">
+  {/* CONTENT */}
+  <div className="relative z-10 max-w-3xl mx-auto flex flex-col gap-10">
 
     {/* BIG LETTER */}
     <span className="font-playfair absolute text-[#2a2018]/[0.05] italic left-[-80px] top-[-100px] text-[200px]">
       C
     </span>
 
-
-    <span className="font-cormorant text-[#2a2018] md:text-xl tracking-widest absolute left-[10px]">
+    <span className="font-cormorant text-[#2a2018] md:text-xl tracking-widest">
       &mdash; Begin a conversation
     </span>
 
-    <h2 ref={ref} className="reveal text-[#0d0d0d]/80 font-lovers md:text-[12rem] -mt-8 tracking-widest text-[5rem] absolute left-[10px] top-[20px]">
+    <h2
+      ref={ref}
+      className="reveal text-[#0d0d0d]/80 font-lovers tracking-widest text-[5rem] md:text-[12rem] leading-none"
+    >
       Contact
     </h2>
 
-    <h3 ref={ref7} className="reveal font-cormorant text-2xl md:top-[240px] md:text-4xl italic tracking-widest text-[#4A3F35] absolute left-[10px] top-[160px]">
+    <h3
+      ref={ref7}
+      className="reveal font-cormorant text-2xl md:text-4xl italic tracking-widest text-[#4A3F35]"
+    >
       “ <span className="text-[#c17f3e] uppercase">Find us</span> below at: ”
     </h3>
-    
-      
+
     {/* WHATSAPP */}
-    <h4 ref={ref8} className="reveal font-lovers text-[#7A6A58] text-[3rem] absolute md:top-[300px] md:text-[6rem] top-[260px] tracking-widest left-[10px]">
-      WhatsApp:
-    </h4>
+    <div className="flex flex-col gap-2">
+      <h4
+        ref={ref8}
+        className="reveal font-lovers text-[#7A6A58] text-[3rem] md:text-[6rem]"
+      >
+        WhatsApp:
+      </h4>
 
-    <p ref={ref9} className="reveal font-cormorant text-[#7A6A58]/70 text-lg absolute top-[420px] md:text-xl tracking-widest left-[10px]">
-      For orders and assistance, connect with us on WhatsApp.
-    </p>
+      <p
+        ref={ref9}
+        className="reveal font-cormorant text-[#7A6A58]/70 text-lg md:text-xl"
+      >
+        For orders and assistance, connect with us on WhatsApp.
+      </p>
 
-    <a
-      ref={ref10}
-      href="https://wa.me/919592285000"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="reveal font-cormorant text-blue-700 absolute md:top-[470px] top-[400px] left-[10px] text-xl italic tracking-widest"
-    >
-      → Talk to us here
-    </a>
+      <a
+        ref={ref10}
+        href="https://wa.me/919592285000"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="reveal font-cormorant text-blue-700 text-xl italic"
+      >
+        → Talk to us here
+      </a>
+    </div>
 
     {/* INSTAGRAM */}
-    <h5 ref={ref11} className="reveal text-[3rem] text-[#7A6A58] md:text-[6rem] tracking-widest font-lovers absolute top-[450px] md:top-[520px] left-[10px]">
-      Instagram:
-    </h5>
+    <div className="flex flex-col gap-2">
+      <h5
+        ref={ref11}
+        className="reveal text-[3rem] md:text-[6rem] text-[#7A6A58] font-lovers"
+      >
+        Instagram:
+      </h5>
 
-    <p ref={ref12} className="reveal font-cormorant text-[#7A6A58]/70 text-lg absolute top-[510px] tracking-widest left-[10px] md:text-xl md:top-[640px]">
-      Discover our collections on Instagram.
-    </p>
+      <p
+        ref={ref12}
+        className="reveal font-cormorant text-[#7A6A58]/70 text-lg md:text-xl"
+      >
+        Discover our collections on Instagram.
+      </p>
 
-    <a
-      ref={ref13}
-      href="https://www.instagram.com/rudra_clubfashionlabs/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="reveal font-cormorant text-blue-700 absolute top-[560px] left-[10px] text-xl italic tracking-widest md:top-[690px]"
+      <a
+        ref={ref13}
+        href="https://www.instagram.com/rudra_clubfashionlabs/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="reveal font-cormorant text-blue-700 text-xl italic"
+      >
+        → Explore Our collection
+      </a>
+    </div>
+
+    {/* FOOT NOTE */}
+    <h6
+      ref={ref14}
+      className="reveal font-cormorant text-xl md:text-4xl text-[#2a2018]/80"
     >
-      → Explore Our collection
-    </a>
-
-    {/* FIXED H6 */}
-    <h6 ref={ref14} className="reveal font-cormorant text-xl tracking-widest text-[#2a2018]/80 absolute top-[640px] left-[10px] md:text-4xl md:top-[790px] z-20">
       We respect your messages and enquiries.
     </h6>
 
   </div>
-</section>
-    
+</section>  
             
       </div>
     </div>
